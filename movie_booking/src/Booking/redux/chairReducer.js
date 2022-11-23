@@ -1,4 +1,5 @@
 const initialState = {
+    
     chairList: [
         {
             hang: 'A',
@@ -172,19 +173,19 @@ const initialState = {
         },
     ],
 
-    // danh sách ghế user đang chọn
+
     chairSelectedList: [
-        { soGhe: 'A1', gia: 75000, daDat: false },
-        { soGhe: 'A2', gia: 75000, daDat: false },
-        { soGhe: 'A3', gia: 75000, daDat: false },
-        { soGhe: 'A4', gia: 75000, daDat: false },
+        // { soGhe: 'A1', gia: 75000, daDat: false },
+        // { soGhe: 'A2', gia: 75000, daDat: false },
+        // { soGhe: 'A3', gia: 75000, daDat: false },
+        // { soGhe: 'A4', gia: 75000, daDat: false },
     ],
 }
 
 export const chairReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'CHANGE_CHAIR': {
-            
+            // console.log(action)
             const data = [...state.chairSelectedList]
 
             const index = data.findIndex((item) => item.soGhe === action.payload.soGhe)
